@@ -1,12 +1,10 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
 import { Link } from 'react-router-dom'
 
 
 const Login = () => {
     return (
         <>
-            <Layout>
                 <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <img className="mx-auto h-10 w-auto" src="logo.png" alt="GrabMart Logo" />
@@ -45,8 +43,7 @@ const Login = () => {
                         <p className='text-green-600 hover:text-green-500 text-lg font-bold text-center'><Link to='/signup'>Sign Up Now !</Link></p>
                     </div>
                 </div>
-            </Layout>
-        </>
+            </>
     )
 }
 

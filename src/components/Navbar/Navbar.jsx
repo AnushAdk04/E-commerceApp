@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaCartShopping } from 'react-icons/fa6'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
@@ -40,12 +40,6 @@ const Navbar = () => {
                 <Link to='/allproducts' onClick={() => setIsMenuOpen(false)}>Products</Link>
               </li>
               <li className='mr-5 hover:text-green-500 cursor-pointer'>
-                <Link to='/groceries' onClick={() => setIsMenuOpen(false)}>Groceries</Link>
-              </li>
-              <li className='mr-5 hover:text-green-500 cursor-pointer'>
-                <Link to='/clothes' onClick={() => setIsMenuOpen(false)}>Clothes</Link>
-              </li>
-              <li className='mr-5 hover:text-green-500 cursor-pointer'>
                 <Link to='/contact' onClick={() => setIsMenuOpen(false)}>Contact</Link>
               </li>
             </ul>
@@ -61,7 +55,7 @@ const Navbar = () => {
 
               <Link to='/cart'>
                 <button>
-                  <FaCartShopping size={30} />
+                  <span className='text-green-600'>{cart.length}</span><FaCartShopping size={30} />
                 </button>
               </Link>
             </div>
@@ -76,7 +70,7 @@ const Navbar = () => {
 
               <Link to='/cart'>
                 <button>
-                  <FaCartShopping size={30} />
+                <span className='text-green-600'>{cart.length}</span><FaCartShopping size={30} />
                 </button>
               </Link>
             </div>
